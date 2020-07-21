@@ -8,8 +8,7 @@ const options = { expiresIn: "30m" };
 function generateToken(user) {
   const payload = {
     subject: user.id,
-    username: user.username,
-    department: user.department
+    username: user.username
   };
   return jwt.sign(payload, secret, options);
 }
